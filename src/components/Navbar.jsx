@@ -23,10 +23,11 @@ const Navbar = () => {
         <div className="flex gap-6 list-none">
         <a
   href="tel:+919310284204"
-  className="bg-white hover:bg-blue-800 px-2 md:px-4 py-2 rounded text-blue-700 hover:text-white transition duration-300 ease-linear"
+  className="bg-white hover:bg-blue-800 px-2 md:px-4 py-2 rounded text-blue-700 hover:text-white transition duration-300 ease-linear inline-flex items-center gap-1 whitespace-nowrap"
 >
-<span className="text-blue-700">📞</span> +91-9310284204
+  <span className="text-blue-700 text-lg">📞</span> +91-9310284204
 </a>
+
           {/* <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
             Classes
           </li> */}

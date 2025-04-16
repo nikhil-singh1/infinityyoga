@@ -48,7 +48,7 @@ export default function HeroWithForm() {
       <ImageSlider />
 
       {/* Floating Form */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-[40%] md:-bottom-[15%] z-20 w-[70%] md:w-[80%] max-w-5xl">
+      <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-[45%] md:-bottom-[15%] z-20 w-[70%] md:w-[80%] max-w-5xl">
         <div className="bg-blue-950 p-4 md:p-6 rounded-3xl shadow-2xl">
           <h2 className="text-2xl font-bold mb-4 text-center text-white">
             Book a Demo
