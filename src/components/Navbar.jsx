@@ -20,16 +20,19 @@ const Navbar = () => {
         <span className="text-2xl font-bold text-white">Infinity Yoga</span>
         </Link>
 
-        <div className=" hidden md:flex gap-6 list-none">
-        <li className="cursor-pointer hover:text-blue-400 transition duration-300 ease-linear">
-            About
-          </li>
-          <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
+        <div className="flex gap-6 list-none">
+        <a
+  href="tel:+919310284204"
+  className="bg-white hover:bg-blue-800 px-2 md:px-4 py-2 rounded text-blue-700 hover:text-white transition duration-300 ease-linear"
+>
+<span className="text-blue-700">📞</span> +91-9310284204
+</a>
+          {/* <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
             Classes
-          </li>
-          <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
-            Prices
-          </li>
+          </li> */}
+          {/* <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
+            Prices */}
+          {/* </li>
           <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
             Gallery
           </li>
@@ -38,10 +41,10 @@ const Navbar = () => {
           </li>
           <li className="cursor-pointer hover:text-orange-400 transition duration-300 ease-linear">
             Blogs
-          </li>
+          </li> */}
         </div>
 
-        <div className=" md:hidden flex items-center">
+        {/* <div className=" md:hidden flex items-center">
           {menu ? (
             <IoMdCloseCircle
               size={29}
@@ -55,11 +58,11 @@ const Navbar = () => {
               onClick={handleChange}
             />
           )}
-        </div>
+        </div> */}
       </nav>
 
       {/* responsive section  */}
-      <div
+      {/* <div
         className={`${
           menu ? "translate-x-0" : "-translate-x-full"
         } md:hidden flex flex-col absolute z-10  bg-gradient-to-r from-[#000000]  to-[#3533cd] text-white list-none left-0 top-16 font-semibold text-2xl text-left  pt-8 pb-4 gap-8 w-screen h-screen rounded-r-xl transition-transform duration-300`}
@@ -71,7 +74,7 @@ const Navbar = () => {
         <li className="cursor-pointer hover:text-secondary mx-12">Gallery</li>
         <li className="cursor-pointer hover:text-secondary mx-12">Teachers</li>
         <li className="cursor-pointer hover:text-secondary mx-12">Blogs</li>
-      </div>
+      </div> */}
     </header>
   );
 };

@@ -54,7 +54,7 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="relative w-full h-[40vh] md:h-[95vh] overflow-hidden shadow-lg mt-10">
+    <div className="relative w-full h-[60vh] md:h-[95vh] overflow-hidden shadow-lg mt-10">
       <AnimatePresence>
         <motion.img
           key={images[current].image}
@@ -83,13 +83,13 @@ export default function ImageSlider() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+        className="hidden md:block absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
       >
         ◀
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+        className="hidden md:block absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
       >
         ▶
       </button>

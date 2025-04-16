@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Packages = () => {
+  const navigate = useNavigate();
   const [selectedSession, setSelectedSession] = useState(null);
   const [showDrawer, setShowDrawer] = useState(false);
 
@@ -319,7 +321,7 @@ const Packages = () => {
         </div>
 
         <div className="mt-4 space-y-2">
-          <button
+          {/* <button
             className="bg-blue-950 text-white rounded py-2 w-full"
             onClick={() => {
               setSelectedSession(session);
@@ -327,7 +329,7 @@ const Packages = () => {
             }}
           >
             More Details
-          </button>
+          </button> */}
 
           <div className="flex gap-2">
             <a
@@ -346,7 +348,13 @@ const Packages = () => {
             </a>
           </div>
 
-          <button className="bg-blue-950 text-white rounded py-2 w-full">
+          <button 
+          onClick={() => {
+            setSelectedSession(session);
+            navigate("/yogaform", { state: { sessionTitle: session.title } });
+           
+          }}
+          className="bg-blue-950 text-white rounded py-2 w-full">
             Book Now
           </button>
         </div>

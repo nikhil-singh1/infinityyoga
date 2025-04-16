@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const services = [
   {
-    title: "Yoga Classes at Home",
+    title: "Yoga Classes at Your Doors",
     description: "Get your personal trainer at your home on your schedule time to achieve your health goal.",
     image: "/home_yoga.webp",
     route: "/yoga-at-home"

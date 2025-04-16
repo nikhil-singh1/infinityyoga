@@ -1,28 +1,28 @@
 import React, { useEffect, useState }from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Classes from "./components/Classes";
-import Teachers from "./components/Teachers";
-import Pricing from "./components/Pricing";
+
 import Footer from "./components/Footer";
 import Preloader from "./components/loading";
-import Testimonials from "./components/Testimonials";
-import Sessions from "./components/Sessions";
-import YogaBenefits from "./components/YogaBenefits";
-import Services from "./components/Services";
-import HeroWithForm from "./components/form";
-import PricingSection from "./components/prices";
+
 import FloatingContactIcons from "./components/FloatingContactIcons";
-import YogaHero from "./components/yogahero";
-import Packages from "./components/packages";
+
+import Home from "./pages/Home";
+import Sessions from "./components/Offline_Sessions";
+import Online from "./components/Online_Session";
+import YogaBookingForm from "./components/YogaBookingForm";
 
 
 
 const App = () => {
   const businessPhoneNumber = "+919310284204";
 
+  const location = useLocation();
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const preloaderShown = sessionStorage.getItem("preloaderShown");
@@ -40,25 +40,18 @@ const App = () => {
     return <Preloader />; // Show Preloader only on first visit
   }
   return (
-    <>
-      <Navbar />
-      <div className="relative pb-40"> {/* Add padding to push Services down */}
-  <HeroWithForm />
-</div>
-      {/* <Hero /> */}
-      <Services />
-      <Packages />
-      {/* <Sessions /> */}
-      <About />
-      <YogaBenefits />
-      {/* <Classes /> */}
-      {/* <Teachers /> */}
-      {/* <PricingSection /> */}
-      <Testimonials />
+ <div>
+    <Navbar />
+      <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/yoga-at-home" element={<Sessions/>} />
+      <Route path="/online-yoga" element={<Online/>} />
+      <Route path="/yogaform" element={<YogaBookingForm />} />
+      </Routes>
+
       <FloatingContactIcons phoneNumber={businessPhoneNumber} />
-      <YogaHero />
       <Footer />
-    </>
+    </div>
   );
 };
 
