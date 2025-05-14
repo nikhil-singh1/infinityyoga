@@ -120,13 +120,13 @@ const Testimonials = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-gradient-to-r from-[#000000] to-[#3533cd] text-white p-6 rounded-xl shadow-lg w-80 relative"
               >
-                <div className="flex justify-center mb-4">
+{/*                 <div className="flex justify-center mb-4">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-20 h-20 rounded-full object-cover border-4 border-white"
                   />
-                </div>
+                </div> */}
                 <p className="italic text-base">"{testimonial.feedback}"</p>
                 <h4 className="font-semibold mt-4">{testimonial.name}, Age {testimonial.age}</h4>
                 <div className="flex justify-center mt-2">{renderStars(testimonial.rating)}</div>
