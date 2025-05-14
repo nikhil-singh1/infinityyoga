@@ -31,12 +31,12 @@ const About = () => {
           </p>
 
           <div className="flex justify-center md:justify-start pt-4">
-            <button
+{/*             <button
               className="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
               onClick={() => navigate("/explore")}
             >
               Explore More
-            </button>
+            </button> */}
           </div>
         </div>
 
