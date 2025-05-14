@@ -13,9 +13,9 @@ const YogaHero = () => {
               We are here to provide you with most professional yoga experts.
               You can book sessions even for home classes. We are just a call away.
             </p>
-            <button className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-full hover:bg-blue-950 transition">
+{/*             <button className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-full hover:bg-blue-950 transition">
               Discover more
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
