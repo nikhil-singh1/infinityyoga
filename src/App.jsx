@@ -18,11 +18,7 @@ const App = () => {
   const businessPhoneNumber = "+919310284204";
 
   const location = useLocation();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const preloaderShown = sessionStorage.getItem("preloaderShown");
@@ -32,7 +28,13 @@ const App = () => {
       setTimeout(() => {
         setLoading(false);
         sessionStorage.setItem("preloaderShown", "true");
-      }, 4400);
+      }, 6000);
+    }
+  }, []);
+
+  if (loading) {
+    return <Preloader />; // Show Preloader only on first visit
+  }
     }
   }, []);
 
